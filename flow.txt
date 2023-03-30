@@ -1,0 +1,19 @@
+Bacnkend (APIs)
+     - Authentication
+        - JWT ( can be used anywhere )
+            - Can be Stored in Local Storage as well as in Cookies
+            - Signature
+                - No one can modify details in body of JWT
+        - Cookies ( Can only be used when client is a browser )
+            - Stored in Cookies section
+     - Serve Videos
+
+
+Frontend (TV OS)
+     - Register
+     - Login
+     - List of Videos
+     - Video Details
+     - Play Videos
+
+
