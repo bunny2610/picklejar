@@ -1,0 +1,16 @@
+.pagination_block{
+    display: flex;
+    justify-content: end;
+    margin: 0px 10px;
+}
+
+.pagination_block .page-link{
+    font-size: 12px;
+    color: #343a40 !important;
+}
+
+.page-item.active .page-link{
+    color: #fff !important;
+    background-color: #343a40 !important;
+}
+

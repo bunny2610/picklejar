@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href=" /css/cv.css">
+  <script src="https://kit.fontawesome.com/3dd22133b8.js" crossorigin="anonymous"></script>
+  <i class="fa-brands fa-stackpath"></i>
+  <title>Create Event</title>
+</head>
+
+<body>
+
+  <div class="header">
+  </div>
+
+
+
+
+  <div class="container">
+    <div class="offset-md-2">
+      <div class="d-flex justify-content-between">
+        <h1>Live Event <lord-icon src="https://cdn.lordicon.com/biwxmlnf.json" trigger="loop" delay="750"
+            colors="primary:#000000" style="width:700px;height:70px">
+          </lord-icon>
+        </h1>
+        <div class="d-flex justify-content-end">
+
+          <div class="text-right col-4">
+
+          </div>
+        </div>
+
+
+      </div>
+
+      <hr color="black" class="my-3" size="3px">
+
+      <form action="/createEvent" method="POST" class="d-flex flex-wrap w-100" enctype="multipart/form-data">
+        <!-- <input type="hidden" name="id" id="video_id" > -->
+        <div class="col-3 px-0">
+          <div class="pt-4" id="video_block">
+            <label>Picture | 1920x1080</label>
+            <div class="border border-dark rounded d-flex flex-column justify-content-center align-items-center"
+              style="position: relative;">
+              <label for="video_img" class="label_block my-3">
+                <h6>Select File</h6>
+                <h6>OR</h6>
+                <h6> Drop File </h6>
+              </label>
+              <input type="file" id="video_img" name="video" style="display:none;" class="form-control">
+              <input type="text" id="video_link" name="video" style="display:none;" class="form-control file_link">
+              <img src="" class="img-fluid rounded">
+              <button type="button" class="btn-danger remove_img d-none">&times;</button>
+            </div>
+          </div>
+
+          <div class="pt-4" id="thumbnail_block">
+            <label>Thumbnail | 1600x140</label>
+            <div class="border border-dark rounded d-flex flex-column justify-content-center align-items-center"
+              style="position: relative;">
+              <label for="thumbnail_img" class="label_block my-3">
+                <h6>Select File</h6>
+                <h6>OR</h6>
+                <h6> Drop File </h6>
+              </label>
+              <input type="file" id="thumbnail_img" name="thumbnail" style="display:none;" class="form-control">
+              <input type="text" id="thumbnail_link" name="thumbnail" style="display:none;"
+                class="form-control file_link">
+
+              <img src="" class="img-fluid rounded">
+              <button type="button" class="btn-danger remove_img d-none">&times;</button>
+            </div>
+          </div>
+
+          <div class="pt-4" id="background_block">
+            <label>Background image | 1920x1080</label>
+            <div class="border border-dark rounded d-flex flex-column justify-content-center align-items-center"
+              style="position: relative;">
+              <label for="background_img" class="label_block my-3">
+                <h6>Select File</h6>
+                <h6>OR</h6>
+                <h6> Drop File </h6>
+              </label>
+              <input type="file" id="background_img" name="background" style="display:none
+              ;" class="form-control">
+              <input type="text" id="background_link" name="background" style="display:none;"
+                class="form-control file_link">
+              <img src="" class="img-fluid rounded">
+              <button type="button" class="btn-danger remove_img d-none">&times;</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-9 pt-4">
+
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" class="form-control" name="title" placeholder="Enter Title" required>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" id="description" class="form-control" name="description" placeholder="Enter Description"
+              required>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-6">
+              <label>Artists(Seperate by comma)</label>
+              <input type="text" class="form-control" name="artists" placeholder="Enter Artists">
+            </div>
+
+            <div class="col-md-6">
+              <label>Paste Your Link </label>
+              <!-- <input type="text" class="form-control" placeholder="Enter Attributes" name="attributes"> -->
+              <div class="input-group mb-3">
+
+                <select class="form-select btn-dark" id="inputGroupSelect01">
+                  <option selected>LINKS</option>
+                  <option value="1">HLS</option>
+                  <option value="2">Mp3</option>
+                  <option value="3">Mp4</option>
+                </select>
+                <input type="text" class="form-control" style="width: 250px;" name="link">
+              </div>
+
+            </div>
+          </div>
+
+
+
+          <div class="row my-3">
+            <div class="col-md-6">
+              <label>Duration</label>
+              <input type="time" step="2" id="duration" class="form-control" name="duration" placeholder="">
+            </div>
+
+
+            <div class="col-md-6">
+              <br>
+              <div class="input-group mt-2">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect01">Categories</label>
+                </div>
+                <select class="custom-select form-control" id="inputGroupSelect01" name="categories" required>
+                  <option value="" selected disabled>--Options--</option>
+                  <% categories.forEach(Category=> { %>
+                    <option value="<%= Category.text %>">
+                      <%= Category.text %>
+                    </option>
+                    <% }) %>
+                </select>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row my-4">
+            <!-- <div class="col-md-3">
+              <p class="mx-0 mb-2">Featured</p>
+              <label class="toggle mr-3"> -->
+            <!-- <input type="hidden" name="is_featured" value="no"> -->
+            <!-- <input type="checkbox" name="is_featured" value="yes">
+                <span class="slider"></span>
+                <span class="labels" data-on="Active" data-off="Inactive"></span>
+              </label> -->
+          </div>
+
+          <div class="col-md-3">
+            <!-- <p class="mx-0 mb-2">On Demand</p>
+              <label class="toggle mx-3"> -->
+            <!-- <input type="hidden" name="on_demand" value="no"> -->
+            <!-- <input type="checkbox" name="on_demand" value="yes">
+                <span class="slider"></span>
+                <span class="labels" data-on="Active" data-off="Inactive"></span>
+              </label> -->
+          </div>
+
+          <div class="col-md-3">
+            <!-- <p class="mx-0 mb-2">Pick Lounge</p>
+              <label class="toggle mx-3"> -->
+            <!-- <input type="hidden" name="pick_lounge" value="no"> -->
+            <!-- <input type="checkbox" name="pick_lounge" value="yes">
+                <span class="slider"></span>
+                <span class="labels" data-on="Active" data-off="Inactive"></span>
+              </label> -->
+          </div>
+
+          <div class="col-md-3">
+            <!-- <p class="mx-0 mb-2">Tip Something</p>
+              <label class="toggle ml-3"> -->
+            <!-- <input type="hidden" name="tip_something" value="no"> -->
+            <!-- <input type="checkbox" name="tip_something" value="yes">
+                <span class="slider"></span>
+                <span class="labels" data-on="Active" data-off="Inactive"></span>
+              </label> -->
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col text-right" id="buttons">
+            <a href="/event" id="dark" class="btn btn-outline-dark px-5">BACK</a>
+            <button id="black" type="submit" class="btn btn-dark px-5">CREATE</button>
+          </div>
+        </div>
+    </div>
+    </form>
+
+  </div>
+
+  </div>
+
+
+  <div class="sideBar">
+    <ul>
+      <li><a href="/index"><img src="/images/logo.bdfc658d.png" width="80%" height="80%"></a></li>
+      <li><a href="/index"><i class="fa fa-home"></i>Home</a></li>
+      <li><a href="/categories"><i class="fas fa-user-alt"></i>Categories</a></li>
+      <li><a href="/event"><i class="fa fa-play"></i>Events</a></li>
+      <li><a href="/videos"><i class="fa fa-play"></i>Videos</a></li>
+      <li><a href="/user"><i class="fas fa-user-alt"></i>Users</a></li>
+
+
+      <li><a class="nav-link dropdown-toggle" href="/setting">
+          <i class="fa fa-gear fa-spin"></i> Settings</a></li>
+
+
+    </ul>
+
+
+
+
+    <div class="footer">
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+
+    <script src="/js/createEvent.js"></script>
+
+
+</body>
+
+</html>

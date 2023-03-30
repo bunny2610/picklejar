@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Category</title>
+    <link rel="stylesheet" href="/css/categories.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/3dd22133b8.js" crossorigin="anonymous"></script>
+    <i class="fa-brands fa-stackpath"></i>
+</head>
+
+<body>
+
+    <nav id="nav" class="navbar navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <!-- <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search"> -->
+                <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+            </form>
+        </div>
+    </nav>
+
+
+    <div id="option" class="container my-3">
+        <h4>Welcome To Categories Section</h4>
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <h5 class="card-title">Add a Category</h5>
+                    <div class="form-group">
+                        <input class="form-control" id="addTxt" name="text" type="text">
+                    </div>
+                    <button type="button" class="btn btn-dark" id="addBtn">Add </button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <h1>categories <lord-icon src="https://cdn.lordicon.com/xhebrhsj.json" trigger="loop" delay="500"
+                colors="primary:#000000" style="width:50px;height:50px">
+            </lord-icon>
+        </h1>
+        <hr>
+        <div id="card-block" class="d-flex flex-wrap w-100">
+        </div>
+    </div>
+    <div id="categoryCard" class="my-2 mx-2 card d-none" style="width: 14rem;">
+        <div class="card-body">
+            <h5 class="card-title"></h5>
+            <button class="btn btn-dark delete_btn" type="button" name="category_id" value=""> Delete</button>
+        </div>
+    </div>
+    <div class="sideBar">
+        <ul>
+            <li><a href="/index"><img src="/images/logo.bdfc658d.png" width="80%" height="80%"></a></li>
+            <li><a href="/index"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="/categories"><i class="fas fa-user-alt"></i>Categories</a></li>
+            <li><a href="/event"><i class="fa fa-play"></i>Events</a></li>
+            <li><a href="/videos"><i class="fa fa-play"></i>Videos</a></li>
+            <li><a href="/user"><i class="fas fa-user-alt"></i>Users</a></li>
+
+            <li><a class="nav-link dropdown-toggle" href="/setting">
+                    <i class="fa fa-gear fa-spin"></i> Settings</a></li>
+
+
+        </ul>
+
+
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="/js/categories.js"></script>
+</body>
+
+</html>

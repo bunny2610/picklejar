@@ -1,0 +1,137 @@
+#option{
+    position: absolute;
+    padding-top: 30px;
+    left: 500px;
+    width: 790px;
+}
+
+
+
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+ .form-signin{
+     padding-top: 10rem;
+     padding-left: 35rem;
+     padding-right: 35rem;
+ }
+
+ #black{
+     background-color: black;
+ }
+
+ .h17{
+     color: blanchedalmond;
+
+
+ }
+
+ .checkbox{
+     color: blanchedalmond;
+ }
+
+
+ .form{
+     padding-top: 2rem;
+ }
+
+ .mb-4{
+     padding-bottom: 5rem;
+     text-align: center;
+ }
+
+ 
+
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+
+
+ #nav{
+     position: fixed;
+     top: 0%;
+     width: 100%;
+     height: 20px;
+     background-color: black;
+     
+ }
+
+ .footer{
+    position: fixed;
+    width: 100%;
+    height: 4%;
+    background-color: black;
+    bottom: 0%;
+
+ }
+
+ 
+
+.sideBar{
+    width : 20%;
+    height : 100%;
+    position: fixed;
+    background-color: black;
+    top: 0px;
+    
+}
+
+.sideBar  ul{
+    list-style: none;
+}
+
+.sideBar ul li a{
+    display: block;
+    text-decoration: none;
+    color: rgb(70, 65, 65);
+    font-size: 20px;
+    padding: 20px 30px;
+}
+
+
+.sideBar ul li a img{
+    padding-bottom: 3   0px;
+
+}
+
+a i{
+    margin-right: 15px;
+}
+
+a {
+
+     display: block;
+    text-decoration: none;
+    color: rgb(75, 64, 64);
+    font-size: 20px;
+    padding: 15px 29px;
+}
+
+.settings{
+    color: white;
+   margin-top: 15px 20px;
+   right: 45px;
+    
+}
+
+.settings nav-link {
+    display: block;
+    padding: 0.5rem 2rem;
+}
+.sideBar ul li a:hover {
+    transition: ease-out;
+    color: white;
+}
+
+.settings a:hover{
+    transition: ease-out;
+    color: white;
+}
